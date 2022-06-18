@@ -60,7 +60,7 @@ function clickOutModal(event: object) {
   background: #454545;
   box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
 
-  position: relative;
+  position: absolute;
 
   padding: 40px;
 }

@@ -33,11 +33,11 @@ const storeModalLanguage = useModalLanguageStore();
     </div>
 
     <button class="cc-button" @click="storeModalLanguage.openModal">CC</button>
-    <div v-if="storeModalLanguage.modalLanguage">
-      <ModalLanguage />
-    </div>
-
   </main>
+
+  <div v-if="storeModalLanguage.modalLanguage">
+    <ModalLanguage />
+  </div>
 </template>
 
 <style>
@@ -110,6 +110,6 @@ main {
 
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -0.5%;
 }
 </style>
