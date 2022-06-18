@@ -5,9 +5,7 @@ import ModalLanguage from './ModalLanguage.vue';
 
 const storeLanguage = useLanguageStore();
 const storeModalLanguage = useModalLanguageStore();
-
 </script>
-
 
 <template>
   <main id="main">
@@ -54,11 +52,13 @@ main {
 .cc-button {
   cursor: pointer;
 
+  background-color: #ffffff;
+
   width: 50px;
   height: 50px;
 
-  margin-right: 20px;
-  margin-top: 20px;
+  margin-right: 5%;
+  margin-top: 5%;
 
   font-size: 1.15rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -110,6 +110,6 @@ main {
 
   position: absolute;
   left: 50%;
-  bottom: -0.5%;
+  bottom: -0.55%;
 }
 </style>
