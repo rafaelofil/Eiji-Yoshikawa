@@ -57,8 +57,8 @@ main {
   width: 50px;
   height: 50px;
 
-  margin-right: 5%;
-  margin-top: 5%;
+  margin-right: 20px;
+  margin-top: 20px;
 
   font-size: 1.15rem;
   font-family: Arial, Helvetica, sans-serif;
