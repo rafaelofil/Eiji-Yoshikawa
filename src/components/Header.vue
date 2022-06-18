@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { useLanguageStore } from '../stores/language';
+import { useModalLanguageStore } from '../stores/modalLanguage';
+import ModalLanguage from './ModalLanguage.vue';
+
+const storeLanguage = useLanguageStore();
+const storeModalLanguage = useModalLanguageStore();
+
 </script>
+
 
 <template>
   <main id="main">
@@ -8,13 +16,12 @@
     </div>
 
     <div id="header">
-      <div class="english active">
+      <div v-if="storeLanguage.languageEnglish" class="english active">
         <h1>EIJI YOSHIKAWA</h1>
         <p>1982 - 1962</p>
         <quote>"Hold on to your life and make it honest and brave"</quote>
       </div>
-
-      <div class="portuguese">
+      <div v-else class="portuguese">
         <h1>EIJI YOSHIKAWA</h1>
         <p>1982 - 1962</p>
         <quote>"Mantenha sua vida e torne-a honesta e corajosa."</quote>
@@ -24,7 +31,12 @@
         <img src="../assets/img/scrollclick.svg" alt="Down Scroll Button">
       </button>
     </div>
-    <button class="cc-button" data-modal="open">CC</button>
+
+    <button class="cc-button" @click="storeModalLanguage.openModal">CC</button>
+    <div v-if="storeModalLanguage.modalLanguage">
+      <ModalLanguage />
+    </div>
+
   </main>
 </template>
 
@@ -66,10 +78,10 @@ main {
 }
 
 #header h1 {
-  font-size: 3.75rem;
+  font-size: 3.5rem;
   text-align: center;
   font-weight: bold;
-  line-height: 3.75rem;
+  line-height: 3.5rem;
 }
 
 #header p {
@@ -80,11 +92,14 @@ main {
 }
 
 #header quote {
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1.4em;
   font-style: italic;
 }
 
 #scroll {
+  cursor: pointer;
+
   background-color: transparent;
 
   font-size: 1.15rem;
@@ -98,5 +113,3 @@ main {
   bottom: 0;
 }
 </style>
-
-
