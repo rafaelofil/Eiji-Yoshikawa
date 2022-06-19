@@ -7,7 +7,7 @@ const languageStore = useLanguageStore();
 </script>
 
 <template>
-  <section>
+  <section id="intro">
     <div v-if="languageStore.languageEnglish">
       <div class="text">
         <p class="paragraph-intro">

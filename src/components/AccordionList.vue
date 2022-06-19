@@ -98,7 +98,7 @@ onMounted(() => {
     </div>
     <div v-else>
       <h2>OBRAS-PRIMAS DE YOSHIKAWA</h2>
-      <div class="line-separator"></div>
+      <div></div>
       <dl class="accordion">
         <dt class="open-dt"> Musashi</dt>
         <dd>

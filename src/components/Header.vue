@@ -5,6 +5,16 @@ import ModalLanguage from './ModalLanguage.vue';
 
 const storeLanguage = useLanguageStore();
 const storeModalLanguage = useModalLanguageStore();
+
+function scrollToIntro() {
+  const introTop = document.getElementById("intro")?.offsetTop;
+
+  window.scrollTo({
+    top: introTop,
+    behavior: 'smooth',
+  })
+}
+
 </script>
 
 <template>
@@ -19,13 +29,13 @@ const storeModalLanguage = useModalLanguageStore();
         <p>1982 - 1962</p>
         <quote>"Hold on to your life and make it honest and brave"</quote>
       </div>
-      <div v-else class="portuguese">
+      <div v-else>
         <h1>EIJI YOSHIKAWA</h1>
         <p>1982 - 1962</p>
         <quote>"Mantenha sua vida e torne-a honesta e corajosa."</quote>
       </div>
 
-      <button id="scroll">
+      <button id="scroll" @click="scrollToIntro">
         <img src="../assets/img/scrollclick.svg" alt="Down Scroll Button">
       </button>
     </div>
