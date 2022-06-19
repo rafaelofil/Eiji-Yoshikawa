@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useLanguageStore } from '../stores/language';
+import AccordionList from './AccordionList.vue';
 
 const languageStore = useLanguageStore();
 
@@ -65,8 +66,9 @@ const languageStore = useLanguageStore();
     </div>
   </section>
 
+  <AccordionList />
 
-  <section data-anime="scroll">
+  <section>
     <div v-if="languageStore.languageEnglish">
       <div class="text">
         <p>
@@ -106,7 +108,7 @@ const languageStore = useLanguageStore();
           letras no Japão), a Ordem do Tesouro Sagrado e o Prêmio de Arte Mainichi. Suas obras estão cheias de
           referências religiosas budistas e xintoístas, além de citações de clássicos chineses.</p>
 
-        <img class="img-musashi" src="img/Musashi_Vagabond.jpg" alt="Musashi Vagabond">
+        <img class="img-musashi" src="../assets/img/Musashi_Vagabond.jpg" alt="Musashi Vagabond">
       </div>
       <div class="text">
         <p>Aos 70 anos Yoshikawa faleceu de câncer, deixando obras-primas que mudaram uma geração, é reconhecido como um

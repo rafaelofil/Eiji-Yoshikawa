@@ -6,12 +6,11 @@ const storeLanguage = useLanguageStore();
 const storeModalLanguage = useModalLanguageStore();
 
 function clickOutModal(event: object) {
-  const containerModal = document.querySelector(".modal-container");
+  const containerModal: HTMLElement = document.querySelector(".modal-container");
 
   if (event.target === containerModal)
     storeModalLanguage.closeModal();
 }
-
 </script>
 
 <template>
