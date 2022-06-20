@@ -7,13 +7,8 @@
 </template>
 
 <style>
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 #image-github {
+  display: flex;
   margin: 0 auto;
 
   width: 212px;

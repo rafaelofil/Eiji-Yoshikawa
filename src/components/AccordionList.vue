@@ -244,4 +244,21 @@ dd.active {
 .open-dt {
   margin-top: 1rem;
 }
+
+@media only screen and (max-width: 787px) {
+  .open-dt {
+    margin-top: 0.5rem;
+  }
+
+  .accordion-list {
+    margin-top: 0px;
+
+    padding: 0 1.5rem;
+  }
+
+  .accordion-list dd p {
+    font-size: 1.15rem;
+    line-height: 1.6rem;
+  }
+}
 </style>

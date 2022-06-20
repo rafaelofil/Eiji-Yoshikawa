@@ -152,5 +152,18 @@ p {
 
   position: relative;
 }
-</style>
 
+@media only screen and (max-width: 787px) {
+  .emphasis {
+    font-size: 3.2rem;
+  }
+
+  .text {
+    padding: 0 1.5rem;
+    margin-bottom: 0.5rem;
+
+    font-size: 1.15rem;
+    line-height: 1.6rem;
+  }
+}
+</style>

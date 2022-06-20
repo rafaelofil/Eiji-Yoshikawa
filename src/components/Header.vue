@@ -24,15 +24,19 @@ function scrollToIntro() {
     </div>
 
     <div id="header">
-      <div v-if="storeLanguage.languageEnglish" class="english active">
+      <div v-if="storeLanguage.languageEnglish">
         <h1>EIJI YOSHIKAWA</h1>
         <p>1982 - 1962</p>
-        <quote>"Hold on to your life and make it honest and brave"</quote>
+        <div id="quote">
+          <quote>"Hold on to your life and make it honest and brave"</quote>
+        </div>
       </div>
       <div v-else>
         <h1>EIJI YOSHIKAWA</h1>
         <p>1982 - 1962</p>
-        <quote>"Mantenha sua vida e torne-a honesta e corajosa."</quote>
+        <div id="quote">
+          <quote>"Mantenha sua vida e torne-a honesta e corajosa."</quote>
+        </div>
       </div>
 
       <button id="scroll" @click="scrollToIntro">
@@ -49,7 +53,7 @@ function scrollToIntro() {
 </template>
 
 <style>
-main {
+#main {
   display: flex;
 
   justify-content: space-between;
@@ -121,5 +125,60 @@ main {
   position: absolute;
   left: 50%;
   bottom: -0.55%;
+}
+
+@media only screen and (max-width: 982px) {
+  #main {
+    height: 100vh;
+
+    margin: 0 auto;
+  }
+
+  .image-principal {
+    display: none;
+  }
+
+  #header {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cc-button {
+    position: absolute;
+    left: 90%;
+  }
+}
+
+@media only screen and (max-width: 787px) {
+  #header h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  #header p {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  #quote {
+    padding: 0 1.5rem;
+  }
+
+  #quote quote {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  .cc-button {
+    left: 80%;
+  }
+
+  #scroll {
+    left: 40%;
+  }
 }
 </style>
