@@ -5,11 +5,11 @@ import { useLanguageStore } from '../stores/language';
 const languageOption = useLanguageStore();
 const activeClass: string = "active";
 
-function activeAccordion() {
-  const accordionList: HTMLElement = document.querySelectorAll(".accordion dt");
+function activeAccordion(event: any) {
+  const accordionList = document.querySelectorAll(".accordion dt");
 
   if (accordionList.length) {
-    const target: HTMLElement = event.target;
+    const target = event.target;
 
     target.classList.toggle(activeClass);
     target.nextElementSibling.classList.toggle(activeClass);
@@ -17,10 +17,10 @@ function activeAccordion() {
 }
 
 onMounted(() => {
-  const firstAccordionOpen: HTMLElement = document.querySelector(".open-dt")
+  const firstAccordionOpen = document.querySelector(".open-dt")
 
-  firstAccordionOpen.classList.add(activeClass);
-  firstAccordionOpen.nextElementSibling.classList.add(activeClass);
+  firstAccordionOpen?.classList.add(activeClass);
+  firstAccordionOpen?.nextElementSibling?.classList.add(activeClass);
 })
 </script>
 

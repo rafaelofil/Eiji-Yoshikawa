@@ -5,8 +5,8 @@ import { useModalLanguageStore } from '../stores/modalLanguage';
 const storeLanguage = useLanguageStore();
 const storeModalLanguage = useModalLanguageStore();
 
-function clickOutModal(event: object) {
-  const containerModal: HTMLElement = document.querySelector(".modal-container");
+function clickOutModal(event: any) {
+  const containerModal = document.querySelector(".modal-container");
 
   if (event.target === containerModal)
     storeModalLanguage.closeModal();
